@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --yellow: #F4D04E;
+      --gray-950: #111111;
+      --gray-500: #6B6B6B;
+      --white: #FFFFFF;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    @font-face {
+      font-family: 'Figtree';
+      src: url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf');
+      src: url('./assets/fonts/Figtree-VariableFont_wght.ttf');
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Figtree;
+      background: var(--yellow);
+    }
+
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+      padding: 24px;
+      width: 327px;
+      border-radius: 20px;
+      border: solid 1px var(--gray-950);
+      background: var(--white);
+      box-shadow: 8px 8px 0px 0px var(--gray-950);
+    }
+
+    .blog-image {
+      img {
+        border-radius: 10px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .blog-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .blog-content .blog-tag {
+      background: var(--yellow);
+      border-radius: 4px;
+      padding: 4px 12px;
+      color: var(--gray-950);
+      font-weight: bold;
+      align-self: flex-start;
+    }
+    .blog-published-date {
+      font-size: calc(12px + 0.1vw);
+      line-height: 1.5;
+      font-weight: 500;
+      color: var(--gray-500);
+    }
+    .blog-title {
+      font-size: calc(20px + 0.3vw);
+      line-height: 1.5;
+      font-weight: 800;
+      color: var(--gray-950);
+    }
+    .blog-title:hover {
+      color: var(--yellow);
+      cursor: pointer;
+    }
+    .blog-description {
+      font-size: calc(14px + 0.1vw);
+      line-height: 1.5;
+      font-weight: 500;
+      color: var(--gray-500);
+    }
+   
+    .blog-author {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      gap: 12px;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .blog-author-name {
+      color: var(--gray-950);
+
+    }
+    .attribution {
+      position: absolute; 
+      font-size: 11px; 
+      text-align: center; 
+      bottom: 0;
+    }
+
+    .attribution a { 
+      color: hsl(228, 45%, 44%); 
+    }
+
+    @media screen and (min-width: 768px) {
+      .blog-card {
+        width: 384px
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article class="blog-card">
+      <div class="blog-image">
+        <img src="./assets/images/illustration-article.svg" alt="Illustration article">
+      </div>
+      <div class="blog-content">
+        <span class="blog-tag">Learning</span>
+        <span class="blog-published-date">Published 21 Dec 2023</span>
+        <a class="blog-title">HTML & CSS foundations</a>
+        <p class="blog-description">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+      </div>
+      <div class="blog-author">
+        <img src="./assets/images/image-avatar.webp" alt="Picture Author">
+        <span class="blog-author-name">Greg Hooper</span>
+      </div>
+    </article>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">SoDi & Sonah</a>.
+  </footer>
+</body>
+</html>
